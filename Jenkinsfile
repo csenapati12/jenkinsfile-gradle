@@ -83,7 +83,7 @@ def loadProperties() {
 
 
 def loadProperties1(){
-def props = readProperties  file:"${workspace}/gradle.properties"
+def props = readFile  file:"${workspace}/gradle.properties"
 def Var1= props['java']
 def Var2= props['maven']
 echo "Var1=${Var1}"
