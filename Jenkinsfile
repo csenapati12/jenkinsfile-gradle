@@ -90,11 +90,7 @@ def archiveArtifacts()
 		/*** Add the set of email address for the Notification ***/
         def recipientList = "id to be added"  
     
-        emailext (
-            subject: subject,
-            body: emailBody,
-            to: recipientList,
-            mimeType: 'text/html)
+        emailext (subject: subject,body: emailBody,to: recipientList,mimeType: 'text/html)
  }
 
 	 
