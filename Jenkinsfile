@@ -71,8 +71,11 @@ def loadProperties() {
 	echo "${params.Greeting} World!"
 	echo  "WORKSPACE NAME Name is ${workspace}"
         properties = new Properties()
+	echo "1-------------"
         File propertiesFile = new File("${workspace}/gradle.properties")
+	echo "2-------------"
         properties.load(propertiesFile.newDataInputStream())
+	echo "3-------------"
 	
        
   
