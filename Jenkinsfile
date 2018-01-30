@@ -87,7 +87,7 @@ def checkout_code()
 	}
 def build_code()
 	{
-	 echo "***********Building Code************"  
+		echo "***********Building Code************Java version ${java}"  
           //echo "*******getting value ${maven}*********"
          // sh 'cd C:/learning/software-dump/gradle-4.1-bin/practice'
           //sh 'gradle hello1'   
