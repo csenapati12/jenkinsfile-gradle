@@ -58,6 +58,7 @@ def featureBranch()
 	stage 'Checkout'
 	checkout_code()
 	stage 'Build'
+	archiveArtifacts()
 	//withMaven(maven: 'apache Maven 3.3.9'){
 	//sh 'mvn clean compile'
 	//}
@@ -106,6 +107,14 @@ def build_code()
          // sh 'cd C:/learning/software-dump/gradle-4.1-bin/practice'
           //sh 'gradle hello1'   
 }
+
+def archiveArtifacts()
+	{
+	echo "**********Archiving the artifacts *********
+        //sh 'make' 
+         //archiveArtifacts artifacts: '**//*.zip', fingerprint: true 
+}
+ 
 
 
 	 
