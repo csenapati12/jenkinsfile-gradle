@@ -53,6 +53,7 @@ def featureBranch()
 {
  echo "inside FEATURE"
 	stage 'Prepare'
+	loadPropeties()
 	loadProperties1()
 	stage 'Checkout'
 	checkout_code()
@@ -75,7 +76,7 @@ def loadProperties() {
         File propertiesFile = new File("${workspace}/gradle.properties")
 	echo "2-------------"
         properties.load(propertiesFile.newDataInputStream())
-	echo "3-------------"
+	echo "3-------------${java}"
 	
        
   
