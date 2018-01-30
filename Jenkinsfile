@@ -53,7 +53,7 @@ def featureBranch()
 {
  echo "inside FEATURE"
 	stage 'Prepare'
-	loadProperties()
+	//loadProperties()
 	loadProperties1()
 	stage 'Checkout'
 	checkout_code()
