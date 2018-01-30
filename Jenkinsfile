@@ -53,7 +53,7 @@ def featureBranch()
 {
  echo "inside FEATURE"
 	stage 'Prepare'
-	loadProperties()
+	loadProperties1()
 	stage 'Checkout'
 	checkout_code()
 	stage 'Build'
@@ -79,6 +79,17 @@ def loadProperties() {
 	
        
   
+}
+
+
+def loadProperties1(){
+def props = readProperties  file:"${workspace}/gradle.properties"
+def Var1= props['java']
+def Var2= props['maven']
+echo "Var1=${Var1}"
+echo "Var2=${Var2}"
+
+
 }
 def checkout_code()
 	{
