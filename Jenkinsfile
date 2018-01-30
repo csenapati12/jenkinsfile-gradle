@@ -72,7 +72,7 @@ def build_code()
 
 def archiveArtifacts()
 	{
-	echo "**********Archiving the artifacts *********
+	echo "**********Archiving the artifacts *********"
         //sh 'make' 
          //archiveArtifacts artifacts: '**//*.zip', fingerprint: true 
 }
