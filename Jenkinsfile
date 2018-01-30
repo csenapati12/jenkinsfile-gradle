@@ -87,10 +87,10 @@ def loadProperties1(){
 def props = readProperties  file:"${workspace}/gradle.properties"
 def Var1= props['java']
 def Var2= props['maven']
-echo "Var1=${Var1}"
-echo "Var2=${Var2}"
+//echo "Var1=${Var1}"
+//echo "Var2=${Var2}"
 echo  "WORKSPACE NAME Name is ${workspace}"
-//echo  "First property is ${java}"
+	echo  "First property is ${Var1} and second property is =${Var2}"
 
 }
 def checkout_code()
@@ -101,7 +101,7 @@ def checkout_code()
 	}
 def build_code()
 	{
-		echo "***********Building Code************Java version ${java}"  
+		//echo "***********Building Code************Java version ${java}"  
           //echo "*******getting value ${maven}*********"
          // sh 'cd C:/learning/software-dump/gradle-4.1-bin/practice'
           //sh 'gradle hello1'   
