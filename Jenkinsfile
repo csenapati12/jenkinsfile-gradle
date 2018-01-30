@@ -17,7 +17,7 @@ node()
 	build_code()
 	stage 'Uploading Artifacts'
 	archiveArtifacts()
-	stage 'Email Notification'()
+	stage 'Email Notification'
 	notifyBuild()
 	
 
@@ -79,7 +79,7 @@ def archiveArtifacts()
  
 /*** Sending the Email Notification ***/
 	
-	def notifyBuild(String buildStatus = 'STARTED')
+	def notifyBuild()
 	{
 		
         buildStatus =  buildStatus ?: 'SUCCESSFUL'
