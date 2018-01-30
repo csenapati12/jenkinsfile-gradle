@@ -84,11 +84,12 @@ def loadProperties() {
 
 def loadProperties1(){
 def props = readProperties  file:"${workspace}/gradle.properties"
-def Var1= props['java']
-def Var2= props['maven']
-echo "Var1=${Var1}"
-echo "Var2=${Var2}"
-
+//def Var1= props['java']
+//def Var2= props['maven']
+//echo "Var1=${Var1}"
+//echo "Var2=${Var2}"
+echo  "WORKSPACE NAME Name is ${workspace}"
+echo  "First property is ${java}"
 
 }
 def checkout_code()
