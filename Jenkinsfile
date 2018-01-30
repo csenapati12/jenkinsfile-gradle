@@ -58,7 +58,13 @@ def featureBranch()
 	stage 'Checkout'
 	checkout_code()
 	stage 'Build'
+	build_code()
+	stage 'Uploading Artifacts'
 	archiveArtifacts()
+	stage 'Email Notification'()
+	notifyBuild()
+	
+
 	//withMaven(maven: 'apache Maven 3.3.9'){
 	//sh 'mvn clean compile'
 	//}
@@ -115,6 +121,25 @@ def archiveArtifacts()
          //archiveArtifacts artifacts: '**//*.zip', fingerprint: true 
 }
  
+/*** Sending the Email Notification ***/
+	
+	def notifyBuild(String buildStatus = 'STARTED')
+	{
+		
+        buildStatus =  buildStatus ?: 'SUCCESSFUL'
 
+        def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+        def emailBody = '${JELLY_SCRIPT, template="jenkins-email"}'
+		
+		/*** Add the set of email address for the Notification ***/
+        def recipientList = "id aadded"  
+    
+        emailext (
+            subject: subject,
+            body: emailBody,
+            to: recipientList,
+            mimeType: 'text/html'
+        )
+ }
 
 	 
