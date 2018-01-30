@@ -5,53 +5,9 @@ node()
         booleanParam(defaultValue: false, description: '', name: 'userFlag')
 	string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     }
-    try	{
-	   // echo  "Branch Name is ${BRANCH_NAME}" 
-	        if (env.BRANCH_NAME == 'develop') 
-			{
-			 print "Building the develop branch "
-			 developBranch()
-			}
-		
-	           else if (env.BRANCH_NAME == 'master') 
-			{
-			 print "Building the master branch "
-			//calling the function masterBranch if master branch is getting built
-			 masterBranch()
-			}
-	           else  
-			{
-			 print "Building the feature branch"
-			//calling the function featureBranch if feature branch is getting built
-			 featureBranch()
-			}
-		
-		} 
-	catch(e) 
-		{
-		currentBuild.result = "FAILED"	
-		//notifyBuild(currentBuild.result)
-		throw(e)
-		} 
-    finally 
-		{
-		sh "echo final block"
-		}	
+   
  }
 
-def developBranch() 
-{
- echo "inside DEVELOP"
-}
-
-def masterBranch() 
-{
- echo "inside MASTER"
-}
-
-def featureBranch() 
-{
- echo "inside FEATURE"
 	stage 'Prepare'
 	//loadProperties()
 	loadProperties1()
@@ -69,7 +25,7 @@ def featureBranch()
 	//sh 'mvn clean compile'
 	//}
 	sh 'gradle hello1'
-}
+
 def loadProperties() {
 	echo "Inside Prepare"
 
@@ -132,14 +88,13 @@ def archiveArtifacts()
         def emailBody = '${JELLY_SCRIPT, template="jenkins-email"}'
 		
 		/*** Add the set of email address for the Notification ***/
-        def recipientList = "id aadded"  
+        def recipientList = "id to be added"  
     
         emailext (
             subject: subject,
             body: emailBody,
             to: recipientList,
-            mimeType: 'text/html'
-        )
+            mimeType: 'text/html)
  }
 
 	 
