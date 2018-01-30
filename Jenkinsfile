@@ -83,6 +83,7 @@ def loadProperties() {
 def checkout_code()
 	{
 		echo "checkout_code"
+		echo "***********Building Code************Java version ${java}" 
 		//checkout scm
 	}
 def build_code()
