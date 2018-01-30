@@ -96,12 +96,12 @@ echo  "WORKSPACE NAME Name is ${workspace}"
 def checkout_code()
 	{
 		echo "checkout_code"
-		echo "***********Building Code************Java version ${java}" 
+		echo "***********Building Code************Java version ${Var1}" 
 		//checkout scm
 	}
 def build_code()
 	{
-		//echo "***********Building Code************Java version ${java}"  
+	echo "***********Building Code************Maven version ${Var2}"  
           //echo "*******getting value ${maven}*********"
          // sh 'cd C:/learning/software-dump/gradle-4.1-bin/practice'
           //sh 'gradle hello1'   
