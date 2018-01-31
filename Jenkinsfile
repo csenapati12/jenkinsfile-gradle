@@ -47,6 +47,7 @@ def loadProperties() {
 
 
 def loadProperties1(){
+	checkout scm
 def props = readProperties  file:"${workspace}/gradle.properties"
 def Var1= props['java']
 def Var2= props['maven']
