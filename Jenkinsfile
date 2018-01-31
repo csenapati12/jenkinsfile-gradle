@@ -18,7 +18,7 @@ node()
 	stage 'Uploading Artifacts'
 	archiveArtifacts()
 	stage 'Email Notification'
-	notifyBuild()
+	notifyBuild(currentBuild.result)
 	
 
 	//withMaven(maven: 'apache Maven 3.3.9'){
@@ -80,7 +80,7 @@ def archiveArtifacts()
  
 /*** Sending the Email Notification ***/
 	
-	def notifyBuild()
+	def notifyBuild(String buildStatus = 'STARTED')
 	{
 		
         buildStatus =  buildStatus ?: 'SUCCESSFUL'
