@@ -1,12 +1,12 @@
 node()
 {
 	
-	parameters {
-        booleanParam(defaultValue: false, description: '', name: 'userFlag')
-	string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
-    }
+	//parameters {
+        //booleanParam(defaultValue: false, description: '', name: 'userFlag')
+	//string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+   // }
    
- }
+ 
 
 	stage 'Prepare'
 	//loadProperties()
@@ -24,8 +24,8 @@ node()
 	//withMaven(maven: 'apache Maven 3.3.9'){
 	//sh 'mvn clean compile'
 	//}
-	sh 'gradle hello1'
-
+	//sh 'gradle hello1'
+}
 def loadProperties() {
 	echo "Inside Prepare"
 
