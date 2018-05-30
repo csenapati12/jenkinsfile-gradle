@@ -1,3 +1,4 @@
+
 node()
 {
 	
@@ -6,7 +7,7 @@ node()
 	//string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
    // }
    
- 
+//Added comment for testing 
 
 	stage 'Prepare'
 	//loadProperties()
